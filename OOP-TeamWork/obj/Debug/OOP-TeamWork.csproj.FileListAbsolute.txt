@@ -7,3 +7,13 @@ c:\users\mah4e\documents\visual studio 2013\Projects\OOP-TeamWork\OOP-TeamWork\o
 c:\users\mah4e\documents\visual studio 2013\Projects\OOP-TeamWork\OOP-TeamWork\obj\Debug\OOP-TeamWork.exe
 c:\users\mah4e\documents\visual studio 2013\Projects\OOP-TeamWork\OOP-TeamWork\obj\Debug\OOP-TeamWork.pdb
 c:\users\mah4e\documents\visual studio 2013\Projects\OOP-TeamWork\OOP-TeamWork\obj\Debug\OOP_TeamWork.UI.GameWindow.resources
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.exe.config
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.exe
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.pdb
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.exe
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.pdb
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.csprojResolveAssemblyReference.cache
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork.Properties.Resources.resources
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork.UI.GameWindow.resources
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.csproj.GenerateResource.Cache
+C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\WorkshopGame.UI.AliansVsHeroesForm.resources

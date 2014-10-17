@@ -67,6 +67,10 @@
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="Structure\Wall.cs" />
     <Compile Include="Structure\Weapon.cs" />
+    <Compile Include="UI\AliansVsHeroes.cs" />
+    <Compile Include="UI\AliansVsHeroes.designer.cs">
+      <DependentUpon>AliansVsHeroes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +85,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\AliansVsHeroes.resx">
+      <DependentUpon>AliansVsHeroes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\GameWindow.resx" />
     <None Include="Images\desktop.ini" />
     <None Include="Images\Thumbs.db" />
