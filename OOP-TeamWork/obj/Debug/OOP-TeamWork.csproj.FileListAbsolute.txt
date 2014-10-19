@@ -35,3 +35,5 @@ C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\obj\Debug\OOP_TeamWork.Properties.Res
 C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\obj\Debug\WorkshopGame.UI.AliansVsHeroesForm.resources
 C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\obj\Debug\OOP_TeamWork.UI.GameWindow.resources
 C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\obj\Debug\OOP-TeamWork.csproj.GenerateResource.Cache
+C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\bin\Debug\OOP-TeamWork.exe
+C:\Users\MAH4E\Desktop\FALKOR\OOP-TeamWork\bin\Debug\OOP-TeamWork.pdb

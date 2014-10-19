@@ -10,85 +10,86 @@ namespace OOP_TeamWork
         }
 
 
-        Random random = new Random();
-        int direction = random.Next(1, 5); // creates a number between 1 and 4
+        private static Random random = new Random();
+        private static int direction = random.Next(1, 5); // creates a number between 1 and 4
         bool hasConflict = false;
         bool hasWall = false;
 
-        private void MonsterRandomMovement(int direction)
+        public void MonsterRandomMovement()
         {
-            while (true)
-                if (hasConflict = false)
+            //while (true)
+            if (hasConflict == false)
+            {
+                direction = random.Next(1, 5); // creates a number between 1 and 4
+
+                if (direction == 1)
                 {
-                    if (direction == 1)
-                    {
-                        this.MoveMonsterRight();
-                        if (hasWall == true)
-                        {
-                            hasConflict = true;
-                            Random random = new Random();
-                            direction = random.Next(1, 5); // creates a number between 1 and 4
-                            hasConflict = false;
-                        }
-                    }
-
-                    else if (direction == 2)
-                    {
-                        this.MoveMonsterDown();
-                        if (hasWall == true)
-                        {
-                            hasConflict = true;
-                            Random random = new Random();
-                            direction = random.Next(1, 5); // creates a number between 1 and 4
-                            hasConflict = false;
-                        }
-                    }
-
-                    else if (direction == 3)
-                    {
-                        this.MoveMonsterLeft();
-                        if (hasWall == true)
-                        {
-                            hasConflict = true;
-                            Random random = new Random();
-                            direction = random.Next(1, 5); // creates a number between 1 and 4
-                            hasConflict = false;
-                        }
-                    }
-
-                    else  if (direction == 4)
-                    {
-                        this.MoveMonsterUp();
-                        if (hasWall == true)
-                        {
-                            hasConflict = true;
-                            Random random = new Random();
-                            direction = random.Next(1, 5); // creates a number between 1 and 4
-                            hasConflict = false;
-                        }
-                    }
+                    this.MoveMonsterRight();
+                    //   if (hasWall == true)
+                    // {
+                    //   hasConflict = true;
+                    //                    Random random = new Random();
+                    // direction = random.Next(1, 5); // creates a number between 1 and 4
+                    //hasConflict = false;
+                    //     }
                 }
+
+                else if (direction == 2)
+                {
+                    this.MoveMonsterDown();
+                    //              if (hasWall == true)
+                    //              {
+                    //                  hasConflict = true;
+                    ////                  Random random = new Random();
+                    //                  direction = random.Next(1, 5); // creates a number between 1 and 4
+                    //                  hasConflict = false;
+                    //              }
+                }
+
+                else if (direction == 3)
+                {
+                    this.MoveMonsterLeft();
+                    //            if (hasWall == true)
+                    //            {
+                    //                hasConflict = true;
+                    ////                Random random = new Random();
+                    //                direction = random.Next(1, 5); // creates a number between 1 and 4
+                    //                hasConflict = false;
+                    //            }
+                }
+
+                else if (direction == 4)
+                {
+                    this.MoveMonsterUp();
+                    //          if (hasWall == true)
+                    //          {
+                    //              hasConflict = true;
+                    ////              Random random = new Random();
+                    //              direction = random.Next(1, 5); // creates a number between 1 and 4
+                    //              hasConflict = false;
+                    //          }
+                }
+            }
         }
 
-        private Unit monster;
         private void MoveMonsterRight()
         {
-            this.monster.Move(1, 0); ;
+            this.Move(10, 0);
         }
 
         private void MoveMonsterDown()
         {
-            this.monster.Move(0, 1);
+            this.Move(0, 10);
         }
 
         private void MoveMonsterUp()
         {
-            this.monster.Move(0, -1);
+            this.Move(0, -10);
         }
 
         private void MoveMonsterLeft()
         {
-            this.monster.Move(-1, 0);
+            this.Move(-10, 0);
         }
     }
 }

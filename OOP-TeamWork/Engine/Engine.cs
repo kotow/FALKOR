@@ -7,7 +7,7 @@ namespace OOP_TeamWork
     public class Engine
     {
         private IDrawable painter;
-        private List<Object> objectList;
+        private List<Unit> unitList;
         private Unit player;
         private int interval;
 
@@ -15,11 +15,11 @@ namespace OOP_TeamWork
             int loopInterval)
         {
             this.interval = loopInterval;
-            this.objectList = new List<Object>();
+            this.unitList = new List<Unit>();
             this.SubscribeToUserInput(controller);
             this.InitializeCharacters();
             this.painter = painter;
-            foreach (var obj in objectList)
+            foreach (var obj in unitList)
             {
                 this.painter.AddObject(obj);
             }
@@ -33,7 +33,7 @@ namespace OOP_TeamWork
 
         private void RedrawAll()
         {
-            foreach (var unit in this.objectList)
+            foreach (var unit in this.unitList)
             {
                 this.painter.RedrawObject(unit);
             }
@@ -41,17 +41,29 @@ namespace OOP_TeamWork
 
         private void ProcessUnits()
         {
-            //TODO
+            foreach (var unit in unitList)
+            {
+                if (unit is Monster)
+                {
+                    (unit as Monster).MonsterRandomMovement();
+                }
+                //    if (!unit.IsAlive)
+                //    {
+                //        this.painter.RemoveObject(unit);
+                //    }
+                //}
+                //this.unitList.RemoveAll(x => !x.IsAlive);
+            }
         }
 
         private void InitializeCharacters()
         {
             var playerCharacter = new Mage(100, 100, 198, 255);
             player = playerCharacter;
-            objectList.Add(new BlackMonster(500, 50, 132, 142));
-            objectList.Add(new BlueMonster(300, 150, 136, 136));
-            objectList.Add(new Weapon(100, 100, 100, 100));
-            objectList.Add(player);
+            unitList.Add(new BlackMonster(500, 50, 132, 142));
+            unitList.Add(new BlueMonster(300, 150, 136, 136));
+            //unitList.Add(new Weapon(100, 100, 100, 100));
+            unitList.Add(player);
         }
 
         private void MovePlayerRight()
