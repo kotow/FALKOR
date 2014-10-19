@@ -17,3 +17,13 @@ C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork
 C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork.UI.GameWindow.resources
 C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.csproj.GenerateResource.Cache
 C:\Users\shukri shukriev\Desktop\kotow\trunk\OOP-TeamWork\obj\Debug\WorkshopGame.UI.AliansVsHeroesForm.resources
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.exe.config
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.exe
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.pdb
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.exe
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\bin\Debug\OOP-TeamWork.pdb
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.csprojResolveAssemblyReference.cache
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork.Properties.Resources.resources
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\WorkshopGame.UI.AliansVsHeroesForm.resources
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP_TeamWork.UI.GameWindow.resources
+C:\Users\Nadezhda\Desktop\01_SOFTUNI\Level2\01.OOP\11.Teamwork\FALKOR.git\trunk\OOP-TeamWork\obj\Debug\OOP-TeamWork.csproj.GenerateResource.Cache

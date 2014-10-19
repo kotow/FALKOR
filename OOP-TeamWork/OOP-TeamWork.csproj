@@ -67,7 +67,9 @@
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="Structure\Wall.cs" />
     <Compile Include="Structure\Weapon.cs" />
-    <Compile Include="UI\AliansVsHeroes.cs" />
+    <Compile Include="UI\AliansVsHeroes.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\AliansVsHeroes.designer.cs">
       <DependentUpon>AliansVsHeroes.cs</DependentUpon>
     </Compile>
