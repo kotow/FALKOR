@@ -6,7 +6,7 @@ namespace OOP_TeamWork
         public int bonusHealth;
         public int bonusAttack;
         public int bonusDeffense;
-        public Item(int x, int y, int width, int height) : base(x, y, width, height)
+        public Item(int x, int y, int width, int height) : base(x, y, 30, 30)
         {
 
         }

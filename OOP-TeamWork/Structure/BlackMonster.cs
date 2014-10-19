@@ -6,8 +6,8 @@ namespace OOP_TeamWork
         private const int monsterHealth = 100;
         private const int monsterAtack = 100;
         private const int monsterDefense = 100;
-        public BlackMonster(int x, int y, int width, int height)
-            : base(x, y, width, height, monsterHealth, monsterAtack, monsterDefense)
+        public BlackMonster(int x, int y)
+            : base(x, y, 50, 50, monsterHealth, monsterAtack, monsterDefense)
         {
             this.SpriteType = SpriteType.BlackMonster;
         }

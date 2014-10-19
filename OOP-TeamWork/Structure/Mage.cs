@@ -7,8 +7,8 @@ namespace OOP_TeamWork
         private const int mageAtack = 100;
         private const int mageDefense = 100;
      
-        public Mage(int x, int y, int width, int height)
-            : base(x, y, width, height, mageHealth, mageAtack, mageDefense)
+        public Mage(int x, int y)
+            : base(x, y, 50, 50, mageHealth, mageAtack, mageDefense)
         {
             this.SpriteType = SpriteType.Mage;
         }

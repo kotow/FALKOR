@@ -6,8 +6,8 @@
         private const int assassinAtack = 100;
         private const int assassinDefense = 100;
 
-        public Assassin(int x, int y, int width, int height)
-            : base(x, y, width, height, assassinHealth, assassinAtack, assassinDefense)
+        public Assassin(int x, int y)
+            : base(x, y, 50, 50, assassinHealth, assassinAtack, assassinDefense)
         {
             //image
         }

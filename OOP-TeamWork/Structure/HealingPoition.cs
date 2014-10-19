@@ -4,7 +4,7 @@ namespace OOP_TeamWork
     public class HealingPoition : Item
     {
         private const int healingPoitionBonus = 50;
-        public HealingPoition(int x, int y, int width, int height) : base(x, y, width, height)
+        public HealingPoition(int x, int y) : base(x, y, 30, 30)
         {
             this.bonusHealth = healingPoitionBonus;
             this.bonusAttack = 0;

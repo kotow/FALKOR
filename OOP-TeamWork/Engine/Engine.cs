@@ -47,22 +47,16 @@ namespace OOP_TeamWork
                 {
                     (unit as Monster).MonsterRandomMovement();
                 }
-                //    if (!unit.IsAlive)
-                //    {
-                //        this.painter.RemoveObject(unit);
-                //    }
-                //}
-                //this.unitList.RemoveAll(x => !x.IsAlive);
+                //TODO Remove if it is not Alive
             }
         }
 
         private void InitializeCharacters()
         {
-            var playerCharacter = new Mage(100, 100, 198, 255);
+            var playerCharacter = new Mage(100, 100);
             player = playerCharacter;
-            unitList.Add(new BlackMonster(500, 50, 132, 142));
-            unitList.Add(new BlueMonster(300, 150, 136, 136));
-            //unitList.Add(new Weapon(100, 100, 100, 100));
+            unitList.Add(new BlackMonster(500, 50));
+            unitList.Add(new BlueMonster(300, 150));
             unitList.Add(player);
         }
 

@@ -9,24 +9,24 @@ namespace OOP_TeamWork.UI
 {
     public class PaintBrush : IDrawable
     {
-        private const string MageImagePath = "../../Images/Mage.jpg";
-        private const string HealthPotionImagePath = "../../Images/HealingPoition.jpg";
-        private const string ShieldImagePath = "../../Images/Shield.jpg";
+        private const string MageImagePath = "../../Images/Mage.png";
+        private const string HealthPotionImagePath = "../../Images/HealingPoition.png";
+        private const string ShieldImagePath = "../../Images/Shield.png";
         private const string WallImagePath = "../../Images/Wall.png";
-        private const string BlueMonsterImagePath = "../../Images/BlueMonster.jpg";
-        private const string BlackMonsterImagePath = "../../Images/BlackMonster.jpg";
-        private const string WeaponImagePath = "../../Images/weapon.jpg";
+        private const string BlueMonsterImagePath = "../../Images/BlueMonster.png";
+        private const string BlackMonsterImagePath = "../../Images/BlackMonster.png";
+        private const string WeaponImagePath = "../../Images/weapon.png";
 
         private Image mageImage, healthPotionImage, blueMonster, wallImage, blackMonster, shieldImage, weaponImage;
         private Form gameWindow;
         private List<PictureBox> pictureBoxes;
-        
+
         public PaintBrush(Form form)
         {
             this.gameWindow = form;
             this.LoadResources();
             this.pictureBoxes = new List<PictureBox>();
-         }
+        }
 
         public void AddObject(IDrawable renderableObject)
         {

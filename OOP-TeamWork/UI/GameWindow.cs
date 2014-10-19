@@ -2,6 +2,7 @@
 using OOP_TeamWork.Interfaces;
 using OOP_TeamWork.UI;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WorkshopGame.UI
@@ -9,10 +10,27 @@ namespace WorkshopGame.UI
     partial class GameWindow : Form
     {
         public const int TimeInterval = 150;
+        const int TopMargin = 30;
+
+        Maze maze = null;
 
         public GameWindow()
         {
             InitializeComponent();
+
+            this.SuspendLayout();
+            this.ClientSize = new System.Drawing.Size(784, 406);
+            this.Name = "MazeGen";
+            this.ResumeLayout(false);
+        //   Text = "FALCON GAME";
+        //   Name = "FALCON GAME";
+
+            SetStyle(ControlStyles.UserPaint, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint, true);
+            SetStyle(ControlStyles.DoubleBuffer, true);
+
+            ClientSize = new Size(8000, 4450);
+            go_Click(null, null);
         }
 
         private void GameWindow_Load(object sender, EventArgs e)
@@ -29,6 +47,54 @@ namespace WorkshopGame.UI
             };
 
             timer.Start();
+        }
+
+        void go_Click(object o, EventArgs e)
+        {
+            int rows;
+            int cols;
+            try
+            {
+                rows = int.Parse("14");
+                cols = int.Parse("26");
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Invalid numeric value entered.");
+                return;
+            }
+
+            const int LowerBound = 10;
+            const int UpperBound = 300;
+
+            if (rows < LowerBound || cols < LowerBound)
+            {
+                MessageBox.Show("Out of range\nNumber of rows and columns " +
+                        "must be at least " + LowerBound.ToString());
+                return;
+            }
+
+            if (rows > UpperBound || cols > UpperBound)
+            {
+                MessageBox.Show("Out of range\nNumber of rows and columns " +
+                        "must be below " + UpperBound.ToString());
+                return;
+            }
+
+            maze = new Maze(rows, cols);
+
+            Invalidate();
+            Update();
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            e.Graphics.FillRectangle(new SolidBrush(Color.DarkBlue),
+                         0, 0,
+                         ClientRectangle.Width,
+                         ClientRectangle.Height - 0);
+            if (maze != null)
+                maze.Paint(e.Graphics, 0, 0);
         }
         /// <summary>
         /// Required designer variable.

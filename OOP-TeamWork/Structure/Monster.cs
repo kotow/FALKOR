@@ -5,7 +5,7 @@ namespace OOP_TeamWork
     public abstract class Monster : Unit
     {
         public Monster(int x, int y, int width, int height, int health, int atack, int defense)
-            : base(x, y, width, height, health, atack, defense)
+            : base(x, y, 50, 50, health, atack, defense)
         {
         }
 
@@ -17,7 +17,6 @@ namespace OOP_TeamWork
 
         public void MonsterRandomMovement()
         {
-            //while (true)
             if (hasConflict == false)
             {
                 direction = random.Next(1, 5); // creates a number between 1 and 4
@@ -25,49 +24,41 @@ namespace OOP_TeamWork
                 if (direction == 1)
                 {
                     this.MoveMonsterRight();
-                    //   if (hasWall == true)
-                    // {
-                    //   hasConflict = true;
-                    //                    Random random = new Random();
-                    // direction = random.Next(1, 5); // creates a number between 1 and 4
-                    //hasConflict = false;
-                    //     }
+                    if (hasWall == true)
+                    {
+                        hasConflict = true;
+                        hasConflict = false;
+                    }
                 }
 
                 else if (direction == 2)
                 {
                     this.MoveMonsterDown();
-                    //              if (hasWall == true)
-                    //              {
-                    //                  hasConflict = true;
-                    ////                  Random random = new Random();
-                    //                  direction = random.Next(1, 5); // creates a number between 1 and 4
-                    //                  hasConflict = false;
-                    //              }
+                    if (hasWall == true)
+                    {
+                        hasConflict = true;
+                        hasConflict = false;
+                    }
                 }
 
                 else if (direction == 3)
                 {
                     this.MoveMonsterLeft();
-                    //            if (hasWall == true)
-                    //            {
-                    //                hasConflict = true;
-                    ////                Random random = new Random();
-                    //                direction = random.Next(1, 5); // creates a number between 1 and 4
-                    //                hasConflict = false;
-                    //            }
+                    if (hasWall == true)
+                    {
+                        hasConflict = true;
+                        hasConflict = false;
+                    }
                 }
 
                 else if (direction == 4)
                 {
                     this.MoveMonsterUp();
-                    //          if (hasWall == true)
-                    //          {
-                    //              hasConflict = true;
-                    ////              Random random = new Random();
-                    //              direction = random.Next(1, 5); // creates a number between 1 and 4
-                    //              hasConflict = false;
-                    //          }
+                    if (hasWall == true)
+                    {
+                        hasConflict = true;
+                        hasConflict = false;
+                    }
                 }
             }
         }
