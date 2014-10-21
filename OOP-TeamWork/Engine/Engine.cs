@@ -29,6 +29,10 @@ namespace OOP_TeamWork
         {
             this.ProcessUnits();
             this.RedrawAll();
+            if (hasCollision())
+            {
+                throw new ExecutionEngineException("Game over");
+            } 
         }
 
         private void RedrawAll()
@@ -49,6 +53,22 @@ namespace OOP_TeamWork
                 }
                 //TODO Remove if it is not Alive
             }
+        }
+
+        private bool hasCollision()
+        {
+            bool collision = true;
+            foreach (var unit in this.unitList)
+            {
+                if (!(unit.PositionX>(this.player.PositionX+this.player.Width) ||
+                    (unit.PositionX+unit.Width)<player.PositionX ||
+                    unit.PositionY < (this.player.PositionY + this.player.Height) ||
+                    (unit.PositionY + unit.Height) > player.PositionY))
+                {
+                    collision = true;
+                }
+            }
+            return collision;
         }
 
         private void InitializeCharacters()
