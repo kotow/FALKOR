@@ -29,7 +29,7 @@ namespace WorkshopGame.UI
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.DoubleBuffer, true);
 
-            ClientSize = new Size(8000, 4450);
+            ClientSize = new Size(1385, 690);
             go_Click(null, null);
         }
 
@@ -89,10 +89,8 @@ namespace WorkshopGame.UI
 
         protected override void OnPaint(PaintEventArgs e)
         {
-            e.Graphics.FillRectangle(new SolidBrush(Color.DarkBlue),
-                         0, 0,
-                         ClientRectangle.Width,
-                         ClientRectangle.Height - 0);
+            Wall wall = new Wall(100, 100);
+            wall.Draw();
             if (maze != null)
                 maze.Paint(e.Graphics, 0, 0);
         }

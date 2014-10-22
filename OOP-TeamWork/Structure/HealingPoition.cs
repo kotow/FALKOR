@@ -3,7 +3,7 @@ namespace OOP_TeamWork
 {
     public class HealingPoition : Item
     {
-        private const int healingPoitionBonus = 50;
+        private const int healingPoitionBonus = 10;
         public HealingPoition(int x, int y) : base(x, y, 30, 30)
         {
             this.bonusHealth = healingPoitionBonus;

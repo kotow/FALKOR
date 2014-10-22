@@ -7,6 +7,5 @@ namespace OOP_TeamWork.Interfaces
         event EventHandler OnLeftPressed;
         event EventHandler OnUpPressed;
         event EventHandler OnDownPressed;
-        //event EventHandler OnSpellOnePressed;
     }
 }

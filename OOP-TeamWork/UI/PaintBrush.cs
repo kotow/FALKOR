@@ -9,6 +9,11 @@ namespace OOP_TeamWork.UI
 {
     public class PaintBrush : IDrawable
     {
+        private const int ProgressBarSizeX = 50;
+        private const int ProgressBarSizeY = 8;
+        private const int ProgressBarOffsetX = -3;
+        private const int ProgressBarOffsetY = -10;
+
         private const string MageImagePath = "../../Images/Mage.png";
         private const string HealthPotionImagePath = "../../Images/HealingPoition.png";
         private const string ShieldImagePath = "../../Images/Shield.png";
@@ -20,16 +25,22 @@ namespace OOP_TeamWork.UI
         private Image mageImage, healthPotionImage, blueMonster, wallImage, blackMonster, shieldImage, weaponImage;
         private Form gameWindow;
         private List<PictureBox> pictureBoxes;
+        private List<ProgressBar> progressBars;
 
         public PaintBrush(Form form)
         {
             this.gameWindow = form;
             this.LoadResources();
             this.pictureBoxes = new List<PictureBox>();
+            this.progressBars = new List<ProgressBar>();
         }
 
         public void AddObject(IDrawable renderableObject)
         {
+            if (renderableObject is Unit)
+            {
+                this.CreateProgressBar(renderableObject as Unit);
+            }
             this.CreatePictureBox(renderableObject);
         }
 
@@ -38,6 +49,12 @@ namespace OOP_TeamWork.UI
             var picBox = GetPictureBoxByObject(renderableObject);
             this.gameWindow.Controls.Remove(picBox);
             this.pictureBoxes.Remove(picBox);
+            if (renderableObject is Unit)
+            {
+                var progressBar = GetProgressBarByObject(renderableObject as Unit);
+                this.gameWindow.Controls.Remove(progressBar);
+                this.progressBars.Remove(progressBar);
+            }
         }
 
         public void RedrawObject(IDrawable objectToBeRedrawn)
@@ -45,8 +62,35 @@ namespace OOP_TeamWork.UI
             var newCoordinates = new Point(objectToBeRedrawn.PositionX, objectToBeRedrawn.PositionY);
             var picBox = GetPictureBoxByObject(objectToBeRedrawn);
             picBox.Location = newCoordinates;
+            if (objectToBeRedrawn is Unit)
+            {
+                var unit = objectToBeRedrawn as Unit;
+                var progressBar = GetProgressBarByObject(unit);
+                this.SetProgressBarLocation(unit, progressBar);
+                progressBar.Value = unit.CurrentHealth;
+            }
         }
 
+        private void CreateProgressBar(Unit unit)
+        {
+            var progressBar = new ProgressBar();
+            progressBar.Size = new Size(ProgressBarSizeX, ProgressBarSizeY);
+            this.SetProgressBarLocation(unit, progressBar);
+            progressBar.Maximum = unit.health;
+            progressBar.Value = unit.CurrentHealth;
+            progressBar.Tag = unit;
+            progressBars.Add(progressBar);
+            this.gameWindow.Controls.Add(progressBar);
+        }
+
+        private void SetProgressBarLocation(Unit unit, ProgressBar progressBar)
+        {
+            progressBar.Location = new Point(unit.PositionX + ProgressBarOffsetX, unit.PositionY + ProgressBarOffsetY);
+        }
+        private ProgressBar GetProgressBarByObject(Unit unit)
+        {
+            return this.progressBars.First(p => p.Tag == unit);
+        }
 
         private void CreatePictureBox(IDrawable renderableObject)
         {

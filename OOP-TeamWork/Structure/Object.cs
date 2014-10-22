@@ -23,13 +23,27 @@ namespace OOP_TeamWork
         public int PositionY
         {
             get { return positionY; }
-            set { positionY = value; }
+            set 
+            {
+                if (value < 0)
+                {
+                    value = 0;
+                }
+                positionY = value; 
+            }
         }
         
         public int PositionX
         {
             get { return positionX; }
-            set { positionX = value; }
+            set
+            {
+                if (value < 0)
+                {
+                    value = 0;
+                }
+                positionX = value; 
+            }
         }
 
         public void Draw()

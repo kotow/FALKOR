@@ -18,8 +18,8 @@ namespace OOP_TeamWork
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new GameWindow());
-            Application.Run(new AliansVsHeroesForm());
+            Application.Run(new GameWindow());
+            //Application.Run(new AliansVsHeroesForm());
         }
     }
 }

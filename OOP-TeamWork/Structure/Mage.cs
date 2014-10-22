@@ -4,7 +4,7 @@ namespace OOP_TeamWork
     public class Mage : Hero
     {
         private const int mageHealth = 100;
-        private const int mageAtack = 100;
+        private const int mageAtack = 120;
         private const int mageDefense = 100;
      
         public Mage(int x, int y)
