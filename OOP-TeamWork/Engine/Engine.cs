@@ -34,8 +34,8 @@ namespace OOP_TeamWork
 
         public void PlayNextTurn()
         {
-            this.hasCollision();
             this.ProcessUnits();
+            this.hasCollision();
             this.RedrawAll();
         }
 
@@ -66,7 +66,7 @@ namespace OOP_TeamWork
                         throw new Exception("Game Over!");
                     }
                     this.painter.RemoveObject(unit);
-                    this.unitList.Remove(unit);
+                    //this.unitList.Remove(unit);
                 }
             } 
             this.unitList.RemoveAll(x => !x.IsAlive);
@@ -74,9 +74,10 @@ namespace OOP_TeamWork
 
         private void hasCollision()
         {
-            bool collision = false;
+            
             foreach (var unit in this.unitList)
             {
+                bool collision = false;
                 var inRangeX = (
                     (unit.PositionX < (this.player.PositionX+this.player.Width)) &&
                     ((unit.PositionX+unit.Width) > player.PositionX));
@@ -94,9 +95,10 @@ namespace OOP_TeamWork
                     unit.AttackEnemy(player);
                 }
             }
-            bool collisionItem = false;
+           
             foreach (var item in this.itemList)
             {
+                bool collisionItem = false;
                 var inRangeX = (
                     (item.PositionX < (this.player.PositionX + this.player.Width)) &&
                     ((item.PositionX + item.Width) > player.PositionX));
@@ -111,8 +113,8 @@ namespace OOP_TeamWork
                 if (collisionItem)
                 {
                     (this.player as Hero).TakeItem(item);
-                    this.painter.RemoveObject(item);
-                    this.itemList.Remove(item);
+                    //this.painter.RemoveObject(item);
+                    //this.itemList.Remove(item);
                 }
             }
         }
@@ -140,6 +142,9 @@ namespace OOP_TeamWork
         }
         private void InitializeItems()
         {
+            itemList.Add(new Weapon(0, 0));
+            itemList.Add(new HealingPoition(30, 150));
+            itemList.Add(new Shield(300, 10));
             itemList.Add(new Weapon(0, 0));
             itemList.Add(new HealingPoition(30, 150));
             itemList.Add(new Shield(100, 10));
