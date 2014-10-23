@@ -21,8 +21,9 @@ namespace OOP_TeamWork.UI
         private const string BlueMonsterImagePath = "../../Images/BlueMonster.png";
         private const string BlackMonsterImagePath = "../../Images/BlackMonster.png";
         private const string WeaponImagePath = "../../Images/weapon.png";
+        private const string KeyImagePath = "../../Images/key.png";
 
-        private Image mageImage, healthPotionImage, blueMonster, wallImage, blackMonster, shieldImage, weaponImage;
+        private Image mageImage, healthPotionImage, blueMonster, wallImage, blackMonster, shieldImage, weaponImage, keyImage;
         private Form gameWindow;
         private List<PictureBox> pictureBoxes;
         private List<ProgressBar> progressBars;
@@ -85,7 +86,7 @@ namespace OOP_TeamWork.UI
 
         private void SetProgressBarLocation(Unit unit, ProgressBar progressBar)
         {
-            progressBar.Location = new Point(unit.PositionX + ProgressBarOffsetX, unit.PositionY + ProgressBarOffsetY);
+            progressBar.Location = new Point(unit.UnitPositionX + ProgressBarOffsetX, unit.UnitPositionY + ProgressBarOffsetY);
         }
         private ProgressBar GetProgressBarByObject(Unit unit)
         {
@@ -134,6 +135,9 @@ namespace OOP_TeamWork.UI
                 case SpriteType.Shield:
                     image = this.shieldImage;
                     break;
+                case SpriteType.Key:
+                    image = this.keyImage;
+                    break;
                 default:
                     image = this.wallImage;
                     break;
@@ -155,6 +159,7 @@ namespace OOP_TeamWork.UI
             this.blackMonster = Image.FromFile(BlackMonsterImagePath);
             this.shieldImage = Image.FromFile(ShieldImagePath);
             this.weaponImage = Image.FromFile(WeaponImagePath);
+            this.keyImage = Image.FromFile(KeyImagePath);
         }
 
         public int PositionX { get; set; }

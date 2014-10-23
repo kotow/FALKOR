@@ -12,9 +12,14 @@
 
         public void TakeItem(Item item)
         {
+            if (item is Key)
+            {
+                throw new Exception("You Won!");
+            }
             this.CurrentHealth += item.bonusHealth;
             this.attack += item.bonusAttack;
             this.defense += item.bonusDeffense;
+            item.isUsed = true;
         }
 
         public event EventHandler OnRightPressed;

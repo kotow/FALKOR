@@ -9,5 +9,6 @@
         Shield,
         Wall,
         Weapon,
+        Key,
     }
 }

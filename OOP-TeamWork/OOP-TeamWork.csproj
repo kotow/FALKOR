@@ -49,6 +49,7 @@
     <Compile Include="Engine\InteractionManager.cs" />
     <Compile Include="Interfaces\IAIControllable.cs" />
     <Compile Include="Interfaces\IKeyboardControlable.cs" />
+    <Compile Include="Structure\Key.cs" />
     <Compile Include="Structure\Item.cs" />
     <Compile Include="Structure\Assassin.cs" />
     <Compile Include="Structure\BlackMonster.cs" />
@@ -106,6 +107,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Structure\ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

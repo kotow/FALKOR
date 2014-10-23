@@ -58,7 +58,7 @@
 
         void Draw()
         {
-            const int CELLSIZE = 30;
+            const int CELLSIZE = 60;
 
             int xsize = cols * CELLSIZE;
             int ysize = rows * CELLSIZE;

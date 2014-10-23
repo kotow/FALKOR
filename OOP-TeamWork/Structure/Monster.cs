@@ -13,8 +13,7 @@ namespace OOP_TeamWork
         private static Random random = new Random();
         private static int direction = random.Next(1, 5); // creates a number between 1 and 4
         bool hasConflict = false;
-        bool hasWall = false;
-
+        
         public void MonsterRandomMovement()
         {
             if (hasConflict == false)

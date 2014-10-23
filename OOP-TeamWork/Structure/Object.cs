@@ -3,8 +3,8 @@ namespace OOP_TeamWork
 {
     public abstract class Object : IDrawable
     {
-        private int positionX;
-        private int positionY;
+        protected int positionX;
+        protected int positionY;
         private int width;
         private int height;
 
@@ -22,30 +22,14 @@ namespace OOP_TeamWork
 
         public int PositionY
         {
-            get { return positionY; }
-            set 
-            {
-                if (value < 0)
-                {
-                    value = 0;
-                }
-                positionY = value; 
-            }
-        }
-        
+            get { return this.positionY; }
+            set { this.positionY = value; }
+        }        
         public int PositionX
         {
-            get { return positionX; }
-            set
-            {
-                if (value < 0)
-                {
-                    value = 0;
-                }
-                positionX = value; 
-            }
+            get { return this.positionX; }
+            set { this.positionX = value; }
         }
-
         public void Draw()
         {
             //TODO

@@ -29,7 +29,7 @@ namespace WorkshopGame.UI
             SetStyle(ControlStyles.AllPaintingInWmPaint, true);
             SetStyle(ControlStyles.DoubleBuffer, true);
 
-            ClientSize = new Size(1385, 690);
+            ClientSize = new Size(1200, 600);
             go_Click(null, null);
         }
 
@@ -55,8 +55,8 @@ namespace WorkshopGame.UI
             int cols;
             try
             {
-                rows = int.Parse("14");
-                cols = int.Parse("26");
+                rows = int.Parse("10");
+                cols = int.Parse("20");
             }
             catch (FormatException)
             {

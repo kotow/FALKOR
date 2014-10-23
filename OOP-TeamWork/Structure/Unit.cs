@@ -5,6 +5,8 @@
         public int health;
         protected int attack;
         protected int defense;
+        public bool hasWall = false;
+
 
         public Unit(int x, int y, int width, int height, int health, int attack, int defense)
             : base(x, y, width, height)
@@ -16,8 +18,8 @@
 
         public void Move(int x, int y)
         {
-            this.PositionX += x;
-            this.PositionY += y;
+            this.UnitPositionX += x;
+            this.UnitPositionY += y;
         }
 
         public void AttackEnemy(Unit enemy)
@@ -28,7 +30,7 @@
             }
         }
 
-        private int currentHealth = 50;
+        private int currentHealth = 100;
         private bool isAlive = true;
         public bool IsAlive 
         {
@@ -61,11 +63,41 @@
                     this.currentHealth = 0;
                     this.isAlive = false;
                 }
-                else
+                else if (value > health)
+                {
+                    this.currentHealth = health;
+                } 
+               else
                 {
                     this.currentHealth = value;
                 }
             }
         }
+        public int UnitPositionY
+        {
+            get { return this.positionY; }
+            set
+            {
+                if (value < 30 || value > 520)
+                {
+                    value = positionY;
+                }
+                positionY = value;
+            }
+        }
+
+        public int UnitPositionX
+        {
+            get { return positionX; }
+            set
+            {
+                if (value < 30 || value > 1120)
+                {
+                    value = positionX;
+                }
+                positionX = value;
+            }
+        }
+
     }
 }
